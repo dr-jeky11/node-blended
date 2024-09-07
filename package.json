@@ -8,7 +8,9 @@
     "get-expensive": "node src/scripts/getExpensiveProducts.js",
     "get-total-price": "node src/scripts/getTotalPrice.js",
     "check-category": "node src/scripts/checkCategory.js",
-    "transform-array": "node src/scripts/transformArray"
+    "transform-array": "node src/scripts/transformArray",
+    "create-files": "node src/scripts/createFiles",
+    "get-files": "node src/scripts/getFiles"
   },
   "keywords": [],
   "author": "Evgeniy Tyrsyna <tyrsyna@gmail.com>",
