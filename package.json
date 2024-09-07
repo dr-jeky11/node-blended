@@ -6,7 +6,9 @@
   "scripts": {
     "generate": "node src/scripts/generateProducts.js",
     "get-expensive": "node src/scripts/getExpensiveProducts.js",
-    "get-total-price": "node src/scripts/getTotalPrice.js"
+    "get-total-price": "node src/scripts/getTotalPrice.js",
+    "check-category": "node src/scripts/checkCategory.js",
+    "transform-array": "node src/scripts/transformArray"
   },
   "keywords": [],
   "author": "Evgeniy Tyrsyna <tyrsyna@gmail.com>",

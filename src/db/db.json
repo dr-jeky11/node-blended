@@ -2,37 +2,31 @@
   {
     "name": "Small Cotton Chips",
     "price": "251.05",
-    "category": "Toys",
-    "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit"
+    "category": "Toys"
   },
   {
     "name": "Small Cotton Table",
     "price": "19.59",
-    "category": "Industrial",
-    "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design"
+    "category": "Industrial"
   },
   {
     "name": "Modern Cotton Towels",
     "price": "470.50",
-    "category": "Home",
-    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+    "category": "Home"
   },
   {
     "name": "Electronic Frozen Pants",
     "price": "222.55",
-    "category": "Tools",
-    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+    "category": "Tools"
   },
   {
     "name": "Gorgeous Soft Computer",
     "price": "153.49",
-    "category": "Tools",
-    "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
+    "category": "Tools"
   },
   {
     "name": "Ergonomic Steel Mouse",
     "price": "897.59",
-    "category": "Movies",
-    "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016"
+    "category": "Movies"
   }
 ]
