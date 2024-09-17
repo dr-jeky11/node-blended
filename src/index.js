@@ -1,27 +1,11 @@
-import express from "express";
+// src/index.js
 
-const app = express();
-const PORT = 3000;
+import { initMongoDB } from "./db/initMongoDB.js";
+import { startServer } from "./server.js";
 
-app.use((req, res, next) => {
-  console.log(`Time: ${new Date().toLocaleString()}`);
-  next();
-});
+const bootstrap = async () => {
+  await initMongoDB();
+  startServer();
+};
 
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json({
-    message: "Hello, world",
-  });
-});
-
-app.use((err, req, res, next) => {
-  res.status(500).json({
-    message: "Something went wrong",
-  });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+bootstrap();
