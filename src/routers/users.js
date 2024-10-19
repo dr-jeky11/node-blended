@@ -1,8 +1,14 @@
 import { Router } from 'express';
-import { registerUserSchema } from '../validation/users.js';
+import { loginUserSchema, registerUserSchema } from '../validation/users.js';
 import { validateBody } from '../utils/validateBody.js';
-import { usersRegisterController } from '../controllers/users.js';
+import {
+  usersCurrentController,
+  usersLoginController,
+  usersLogoutController,
+  usersRegisterController,
+} from '../controllers/users.js';
 import { ctrlWrapper } from '../utils/ctrlWrapper.js';
+import { checkToken } from '../middlewares/checkToken.js';
 
 const usersRouter = Router();
 
@@ -12,10 +18,14 @@ usersRouter.post(
   ctrlWrapper(usersRegisterController),
 );
 
-// usersRouter.post(
-//   '/login',
-//   validateBody(loginUserSchema),
-//   ctrlWrapper(usersLoginController),
-// );
+usersRouter.post(
+  '/login',
+  validateBody(loginUserSchema),
+  ctrlWrapper(usersLoginController),
+);
+
+usersRouter.post('/logout', checkToken, ctrlWrapper(usersLogoutController));
+
+usersRouter.get('/current', checkToken, ctrlWrapper(usersCurrentController));
 
 export default usersRouter;

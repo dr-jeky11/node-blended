@@ -20,24 +20,7 @@ export const createUser = async (userData) => {
   return updateUserWithToken(user._id);
 };
 
-// export const createActiveSession = async (userId) => {
-//   await SessionsCollection.deleteOne({ userId });
-//   const accessToken = randomBytes(30).toString('base64');
-//   const refreshToken = randomBytes(30).toString('base64');
+export const findUserById = (id) => UsersCollection.findById(id);
 
-//   const accessTokenValidUntil = Date.now() + FIFTEEN_MINUTES;
-//   const refreshTokenValidUntil = Date.now() + THIRTY_DAYS;
-
-//   return SessionsCollection.create({
-//     userId,
-//     accessToken,
-//     refreshToken,
-//     accessTokenValidUntil,
-//     refreshTokenValidUntil,
-//   });
-// };
-
-// export const findSession = (accessToken) =>
-//   SessionsCollection.findOne({ accessToken });
-
-// export const findUserById = (id) => UsersCollection.findById(id);
+export const logoutUserByToken = (id) =>
+  UsersCollection.findByIdAndUpdate(id, { token: '' });
